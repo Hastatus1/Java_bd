@@ -37,7 +37,7 @@ public class Metodos {
 		novaSenha = sc.next();
 		password[i] = novaSenha;
 		
-		criarUsuario();
+		criarUsuario(user[i],password[i]);
 		
 		
 		System.out.println("----------------------------------\n"
@@ -45,14 +45,19 @@ public class Metodos {
 				+ "\n----------------------------------");
 		i++;
 		
-		criarUsuario();
 		
-		System.out.println("púdim");
 	}
 	
-	static void criarUsuario() {
+	static void criarUsuario(String nome, String senha) {
 		int[] DBA = {1,2,3,4,5,6,7,8,9,10};
+		nome = user[i];
+		senha = password[i];
 		
-		Usuario a = new Usuario(user[i], password[i]);
+		Usuario aaa = new Usuario(nome,senha);
+		
+		System.out.println(aaa.nome);
+		System.out.println(aaa.senha);
 	}
+	
+
 }
